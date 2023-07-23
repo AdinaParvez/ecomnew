@@ -11,6 +11,7 @@ import productRoutes from './routes/productRoutes.js'
 import cors from "cors"
 import path from 'path'
 
+
 //configure env
 dotenv.config();
 
