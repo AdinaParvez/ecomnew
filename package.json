@@ -2,13 +2,13 @@
   "name": "ecommerceapp2023",
   "version": "1.0.0",
   "description": "ecommerce rest api",
-  "main": "server.cjs",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
-    "client": "npm start --prefix ./client"
-
+    "client": "npm start --prefix ./client",
+    "prod": "concurrently \"npm run start\" \"npm run client\""
   },
   "keywords": [],
   "author": "Adina",
