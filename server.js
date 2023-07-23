@@ -32,7 +32,7 @@ app.use('/api/v1/category', categoryRoutes)
 app.use('/api/v1/product', productRoutes)
 
 //rest api
-app.get('*',function(req,res){
+app.use('*',function(req,res){
   res.sendFile(path.join(path.dirname(__filename), './client/build/index.html'));
 });
 
@@ -44,3 +44,6 @@ app.listen(PORT,()=>{
 
     console.log(`Server running on ${process.env.DEV_MODE} mode on port ${PORT}`.bgCyan.white);
 })
+//get filename
+const filename = path.basename(__filename);
+console.log(`The filename is ${filename}`);
